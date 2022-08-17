@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ResultFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/result_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_48"
+        android:layout_marginTop="@dimen/dimen_48"
+        android:elevation="@dimen/dimen_2"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/vertical_gradient"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dimen_32dp"
+                android:alpha="0.3"
+                android:background="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_2"
+                android:alpha="0.3"
+                android:fontFamily="@font/poppinsregular"
+                android:gravity="center"
+                android:text="@string/body_mass_index"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_18" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.3"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/bmi_result_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_48"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="center_horizontal"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_90"
+                tools:text="18.61" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="@dimen/dimen_48"
+                android:layout_marginBottom="@dimen/dimen_48"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/user_remark_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_12dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_12sp"
+                tools:text="Hello Olivia, You are normal" />
+
+            <TextView
+                android:id="@+id/bmi_range_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:fontFamily="@font/ralewayregular"
+                android:gravity="center"
+                android:text="@string/normal_bmi_range"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_11sp"
+                tools:text="Normal BMI range: 18.5kg/m2 - 25kg/m2" />
+
+            <TextView
+                android:id="@+id/ponderal_index_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_16"
+                android:alpha="0.6"
+                android:fontFamily="@font/ralewayregular"
+                android:gravity="center"
+                android:text="@string/ponderal_index"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_11sp"
+                tools:text="Ponderal Index: 10.64kg/m3" />
+
+            <LinearLayout
+                android:id="@+id/buttons_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/share_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginVertical="@dimen/dimen_24"
+                    android:layout_weight="1"
+                    android:background="@drawable/transparent_button_bg"
+                    android:fontFamily="@font/ralewaymedium"
+                    android:text="@string/share"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/share"
+                    app:iconGravity="start"
+
+                    app:iconSize="@dimen/dimen_20dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rate_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginVertical="@dimen/dimen_24"
+                    android:layout_weight="1"
+                    android:background="@drawable/transparent_button_bg"
+                    android:drawableStart="@drawable/star"
+                    android:fontFamily="@font/ralewaymedium"
+                    android:text="@string/rate"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/star"
+                    app:iconGravity="textStart"
+                    app:iconPadding="@dimen/dimen_8"
+                    app:iconSize="@dimen/dimen_20dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.ads.nativetemplates.TemplateView
+        android:id="@+id/bmi_ad_template"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen_8"
+        app:gnt_template_type="@layout/gnt_small_template_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_card" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

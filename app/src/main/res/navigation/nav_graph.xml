@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/addDetailsFragment">
+
+    <fragment
+        android:id="@+id/addDetailsFragment"
+        android:name="com.example.noelnwaelugo.presentation.AddDetailsFragment"
+        android:label="Add BMI Details"
+        tools:layout="@layout/fragment_add_details">
+        <action
+            android:id="@+id/action_addDetailsFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.noelnwaelugo.presentation.ResultFragment"
+        android:label="BMI Details"
+        tools:layout="@layout/fragment_result" />
+</navigation>
