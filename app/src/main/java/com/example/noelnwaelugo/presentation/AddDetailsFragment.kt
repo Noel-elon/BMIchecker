@@ -12,6 +12,10 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.noelnwaelugo.R
 import com.example.noelnwaelugo.models.BMIData
+import com.example.noelnwaelugo.utils.HEIGHT_MAX
+import com.example.noelnwaelugo.utils.INTERSTITIAL_AD_ID
+import com.example.noelnwaelugo.utils.MIN_NUM
+import com.example.noelnwaelugo.utils.WEIGHT_MAX
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
@@ -55,11 +59,11 @@ class AddDetailsFragment : Fragment() {
     }
 
     private fun setUpPickers() {
-        weightPicker.minValue = 0
-        weightPicker.maxValue = 100
+        weightPicker.minValue = MIN_NUM
+        weightPicker.maxValue = WEIGHT_MAX
 
-        heightPicker.minValue = 0
-        heightPicker.maxValue = 200
+        heightPicker.minValue = MIN_NUM
+        heightPicker.maxValue = HEIGHT_MAX
 
         genderPicker.displayedValues = resources.getStringArray(R.array.Gender)
     }
@@ -99,7 +103,7 @@ class AddDetailsFragment : Fragment() {
 
         InterstitialAd.load(
             requireContext(),
-            "ca-app-pub-3940256099942544/1033173712",
+            INTERSTITIAL_AD_ID,
             adRequest,
             object : InterstitialAdLoadCallback() {
                 override fun onAdFailedToLoad(adError: LoadAdError) {

@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import com.example.noelnwaelugo.R
+import com.example.noelnwaelugo.utils.NATIVE_AD_ID
 import com.example.noelnwaelugo.utils.screenShot
 import com.example.noelnwaelugo.utils.share
 import com.google.android.ads.nativetemplates.NativeTemplateStyle
@@ -59,7 +60,7 @@ class ResultFragment : Fragment() {
 
     private fun setUpAd() {
         MobileAds.initialize(requireContext())
-        val adLoader = AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
+        val adLoader = AdLoader.Builder(requireContext(), NATIVE_AD_ID)
             .forNativeAd {
                 val styles =
                     NativeTemplateStyle.Builder().build()

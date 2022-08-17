@@ -10,7 +10,7 @@
         <entry key="app/src/main/res/drawable/transparent_button_bg.xml" value="0.151" />
         <entry key="app/src/main/res/drawable/vertical_gradient.xml" value="0.151" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19610507246376813" />
-        <entry key="app/src/main/res/layout/fragment_add_details.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/fragment_add_details.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_result.xml" value="0.1" />
         <entry key="nativetemplates/src/main/res/layout/gnt_small_template_view.xml" value="0.19610507246376813" />
       </map>
